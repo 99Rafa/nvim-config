@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('easymotion/vim-easymotion')
+    use("lukas-reineke/indent-blankline.nvim")
 
     use {
         "folke/which-key.nvim",

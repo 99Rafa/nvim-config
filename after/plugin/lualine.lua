@@ -35,6 +35,8 @@ local custom_nightfly = {
 }
 
 require('lualine').setup {
-  options = { theme  = custom_nightfly },
+  options = { 
+      theme  = custom_nightfly,
+  },
 }
 

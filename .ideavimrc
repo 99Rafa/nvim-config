@@ -6,11 +6,13 @@ Plug 'easymotion/vim-easymotion'
 set easymotion
 
 " map <leader>s <Plug>(easymotion-s)
-" nmap S <Plug>(easymotion-F)
-map s <Plug>(easymotion-s)
+nmap s <Plug>(easymotion-s)
+" map s <Plug>(easymotion-f)
+" map S <Plug>(easymotion-F)
 " map <leader>w
 map <leader>q <Action>(CloseEditor)
-map <leader>Q <Action>(CloseAllEditorsButActive)
+" map <leader>Q <Action>(CloseAllEditorsButActive)
+map \q <Action>(CloseAllEditorsButActive)
 map <leader>w <Action>(SaveDocument)
 map <leader>u <Action>(GotoDeclaration)
 map <leader>U <Action>(GotoImplementation)
@@ -74,3 +76,4 @@ vnoremap p pgvy
 " map <leader>rm :action Move<CR>
 " map <leader>ro :action OptimizeImports<CR>
 " map <leader>rG :action Generate<CR>
+

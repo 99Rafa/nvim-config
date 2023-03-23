@@ -1,5 +1,6 @@
 local colors = {
-  color3   = '#1a1b26',
+  -- color3   = '#1a1b26',
+  color3   = nil,
   color6   = '#a1aab8',
   color7   = '#7dcfff',
   color8   = '#bb9af7',

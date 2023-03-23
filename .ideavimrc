@@ -49,6 +49,7 @@ set visualbell
 set noerrorbells
 set number
 set relativenumber
+set ideajoin
 
 " nnoremap <C-H> <C-W>h
 " nnoremap <C-J> <C-W>j

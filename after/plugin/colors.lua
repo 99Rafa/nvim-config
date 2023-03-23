@@ -1,6 +1,12 @@
+local tokyo = require("tokyonight")
+
 function ColorsMyPencils()
-    require("tokyonight").setup({
+    tokyo.setup({
         transparent = true,
+        styles = {
+            floats = "transparent",
+            sidebars = "transparent",
+        }
     })
 
     vim.cmd.colorscheme("tokyonight")
@@ -10,4 +16,3 @@ function ColorsMyPencils()
 end
 
 ColorsMyPencils()
-

@@ -1,17 +1,19 @@
 "" Source your .vimrc
 "source ~/.vimrc
+
 let mapleader = " "
 
 Plug 'easymotion/vim-easymotion'
 set easymotion
 
 " map <leader>s <Plug>(easymotion-s)
-nmap s <Plug>(easymotion-s)
-" map s <Plug>(easymotion-f)
-" map S <Plug>(easymotion-F)
+" nmap s <Plug>(easymotion-s)
+map s <Plug>(easymotion-f)
+map S <Plug>(easymotion-F)
+map f <Plug>(easymotion-fl)
+map F <Plug>(easymotion-Fl)
 " map <leader>w
 map <leader>q <Action>(CloseEditor)
-" map <leader>Q <Action>(CloseAllEditorsButActive)
 map \q <Action>(CloseAllEditorsButActive)
 map <leader>w <Action>(SaveDocument)
 map <leader>u <Action>(GotoDeclaration)
@@ -19,27 +21,19 @@ map <leader>U <Action>(GotoImplementation)
 map <leader><C-u> <Action>(QuickImplementations)
 
 "" -- Suggested options --
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=8
+set scrolloff=10
 set notimeout
-" Do incremental searching.
 set incsearch
-
-" Don't use Ex mode, use Q for formatting.
-" map Q gq
 map Q <Nop>
 
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
-map <leader>r <Action>(ReformatCode)
+map <leader>f <Action>(ReformatCode)
 
-"" Map <leader>d to start debug
 map <leader>d <Action>(Debug)
 map <leader><C-D> <Action>(Run)
 
-"" Map \b to toggle the breakpoint on the current line
 map \b <Action>(ToggleLineBreakpoint)
 
 " Find more examples here: https://jb.gg/share-ideavimrc
@@ -66,6 +60,7 @@ nnoremap <C-u> <C-u>zz
 
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap G Gzz
 
 " don't overwrite register when pasting over selection
 vnoremap p pgvy
@@ -78,3 +73,7 @@ vnoremap p pgvy
 " map <leader>ro :action OptimizeImports<CR>
 " map <leader>rG :action Generate<CR>
 
+map <leader>sf <Action>(GotoFile)
+map <leader>sa <Action>(GotoAction)
+map <leader>ss <Action>(GotoSymbol)
+map <leader>sg <Action>(FindInPath)

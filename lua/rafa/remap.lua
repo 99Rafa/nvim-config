@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex, { desc = "Ex" })
+vim.keymap.set("n", "<C-s>", "<cmd>w <CR>", { desc = "Write buffer" })
+vim.keymap.set("n", "<leader>w", "<cmd>w <CR>", { desc = "Write buffer" })
+
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -37,8 +40,4 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
--- vim.keymap.set("n", "<leader><leader>", function()
--- vim.cmd("so")
--- end)
 

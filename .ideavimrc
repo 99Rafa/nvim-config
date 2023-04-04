@@ -6,31 +6,30 @@ let mapleader = " "
 Plug 'easymotion/vim-easymotion'
 set easymotion
 
-" map <leader>s <Plug>(easymotion-s)
-" nmap s <Plug>(easymotion-s)
-map s <Plug>(easymotion-f)
-map S <Plug>(easymotion-F)
-map f <Plug>(easymotion-fl)
-map F <Plug>(easymotion-Fl)
-" map <leader>w
-map <leader>q <Action>(CloseEditor)
-map \q <Action>(CloseAllEditorsButActive)
-map <leader>w <Action>(SaveDocument)
-map <leader>u <Action>(GotoDeclaration)
-map <leader>U <Action>(GotoImplementation)
-map <leader><C-u> <Action>(QuickImplementations)
-
-"" -- Suggested options --
-set scrolloff=10
+set clipboard+=unnamed
+set visualbell
+set noerrorbells
+set number
+set relativenumber
+set ideajoin
+set scrolloff=15
 set notimeout
 set incsearch
 map Q <Nop>
 
+" map <leader>s <Plug>(easymotion-s)
+" nmap s <Plug>(easymotion-s)
+map s <Plug>(easymotion-f)
+map S <Plug>(easymotion-F)
+" map f <Plug>(easymotion-fl)
+" map F <Plug>(easymotion-Fl)
+
+map <leader>q <Action>(CloseEditor)
+map \q <Action>(CloseAllEditorsButActive)
+" map <leader>w <Action>(SaveDocument)
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-"" Map \r to the Reformat Code action
 map <leader>f <Action>(ReformatCode)
-
 map <leader>d <Action>(Debug)
 map <leader><C-D> <Action>(Run)
 
@@ -38,22 +37,14 @@ map \b <Action>(ToggleLineBreakpoint)
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-set clipboard+=unnamed
-set visualbell
-set noerrorbells
-set number
-set relativenumber
-set ideajoin
-
 " nnoremap <C-H> <C-W>h
 " nnoremap <C-J> <C-W>j
 " nnoremap <C-K> <C-W>k
 " nnoremap <C-L> <C-W>l
-
-nnoremap <Space>h <C-W>h
-nnoremap <Space>j <C-W>j
-nnoremap <Space>k <C-W>k
-nnoremap <Space>l <C-W>l
+" nnoremap <Space>h <C-W>h
+" nnoremap <Space>j <C-W>j
+" nnoremap <Space>k <C-W>k
+" nnoremap <Space>l <C-W>l
 
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -76,4 +67,24 @@ vnoremap p pgvy
 map <leader>sf <Action>(GotoFile)
 map <leader>sa <Action>(GotoAction)
 map <leader>ss <Action>(GotoSymbol)
+
 map <leader>sg <Action>(FindInPath)
+
+map <leader>su <Action>(ShowUsages)
+
+map <leader>sd <Action>(QuickJavaDoc)
+map <leader>se <Action>(ShowErrorDescription)
+
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gI <Action>(QuickImplementations)
+
+" map gs <Action>(ActivateCommitToolWindow)
+
+map <leader>bb <Action>(Bookmarks)
+map <leader>bt <Action>(Bookmarks.Toggle)
+map gb <Action>(ShowBookmarks)
+map <leader>ba <Action>(ToggleBookmark)
+map <leader>bm <Action>(ToggleBookmarkWithMnemonic)
+
+map <leader>ti <Action>(ExpressionTypeInfo)
